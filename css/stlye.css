@@ -1,0 +1,403 @@
+/******************공통****************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+/*******************폰트***********************/
+* {
+    font-family: 'NanumSquareRound';
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/***********************헤더************************/
+#wrap{
+    width: 100%;
+    background: url(../img/header_back_top.png) no-repeat;
+    background-size: 100%;
+}
+
+header{
+    width: 100%;
+    /* height: 10%; */
+    padding: 5vw 0;
+    /* margin-bottom: 1vw; */
+}
+nav{
+    width: 80%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    gap: 5rem;
+    margin: 0 auto;
+}
+
+nav a{
+    display: block;
+    color: #000;
+    word-break:keep-all;
+}
+
+nav img{
+    width: 7vw;
+}
+
+nav a:hover{
+    color: #ff7777;
+}
+
+nav div{
+    width: 7vw;
+    text-align: center;
+}
+
+nav ul{
+    display: none;
+    background-color: #aaaaaa;
+    color: #fff;
+    width: 150px;
+    text-align: center;
+    margin: 10px;
+}
+
+nav ul li{
+    
+    text-align: center;
+    display: inline-block;
+    width: 130px;
+}
+
+/*****************메인*****************/
+main{
+    width: 100%;
+}
+
+#header_bottom{
+    width: 100%;
+    position:absolute;
+    z-index: 2;
+}
+
+section{
+    width: 100%;
+}
+
+.cloud_img{
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.cloud_img img:nth-child(1){
+    width: 9rem;
+    position: absolute;
+    left: 5%;
+    animation: cloud_move1 2.5s ease-in-out infinite;
+}
+
+.cloud_img img:nth-child(2){
+    width: 9rem;
+    position: absolute;
+    right: 20%;
+    animation: cloud_move2 2.5s ease-in-out infinite;
+}
+
+.cloud_img img:nth-child(3){
+    width: 9rem;
+    position: absolute;
+    right: 5%;
+    animation: cloud_move3 2.5s ease-in-out infinite;   
+}
+
+@keyframes cloud_move1{
+    0%{top: -2rem;}
+    50%{top: 1rem;}
+    100%{top: -2rem;}
+}
+
+@keyframes cloud_move2{
+    0%{top: -5rem;}
+    50%{top: 1rem;}
+    100%{top: -5rem;}
+}
+
+@keyframes cloud_move3{
+    0%{top: -1rem;}
+    50%{top: 2rem;}
+    100%{top: -1rem;}
+}
+
+.single-item{
+    /* position: absolute; */
+    width: 100%;
+    height: 48rem;
+    z-index: 1;
+}
+
+.slick-track{
+    height: 55rem;
+    margin-top: 2rem;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-45%);
+    width: 3vmax;
+    height: 3vmax;
+    color: rgba(0, 0, 0, 0);
+}
+
+.slick-prev {
+    left: 3%;
+    z-index: 1;
+    background: url(../img/prev.png) ;
+    background-size: cover;
+    border: none;
+}
+
+.slick-next {
+    right: 3%;
+    z-index: 1;
+    background: url(../img/next.png);
+    border: none;
+    background-size: cover;                                         
+}
+
+.main_bnner{
+    width: 100%;
+    z-index: 1;
+}
+
+/* @media screen and (max-width: 1580px) {
+    
+    :root{
+        font-size: 14px;
+    }
+    
+    
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    :root{
+        font-size: 12px;
+    }
+    
+    
+} */
+
+#bg_img{
+    z-index: 5;
+    width: 100%;
+}
+
+/* 전시 */
+
+article {
+    width: 90%;
+    margin: 5vw auto;
+    text-align: center;
+}
+
+.text_box {
+    width: 100%;
+    margin: 100px 0;
+}
+
+.text_box h1 {
+    font-size: 3vw;
+}
+
+.text_box p {
+    color: #33e2ab;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+}
+
+.content_box {
+    width: 30%;
+    margin: 3vw;
+    border-radius: 2vw;
+    background: #eee;
+    position: relative;
+}
+
+.content_box img {
+    border-radius:  2vw 2vw 0 0;
+    width: 100%;
+}
+
+.day {
+    width: 30%;
+    margin: 0 auto;
+    padding: 1vw;
+    background: #33e2ab;
+    border-radius: 3vw;
+    color: #fff;
+    font-size: 1vw;
+    font-weight: bold;
+    position: absolute;
+    top: 14.2vw;
+    left: 30%;
+}
+
+.content_box_text {
+    width: 85%;
+    margin: 3vw auto;
+    word-break: keep-all;
+    font-size: 1vw;
+}
+
+/*리뷰 */
+
+.review {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2vw 0;
+}
+
+.review_box_text {
+    width: 20vmax;
+    margin: 1vw;
+    word-break: keep-all;
+    font-size: 1vw;
+}
+
+.review_box_text img {
+    border-radius:  1rem;
+    width: 100%;
+}
+
+
+/*버튼*/
+
+
+.more_but button {
+    font-size: 0.4em;
+    border: solid #FF7777 2px;
+    padding: 15px 50px;
+    border-radius: 50px;
+    color: #FF7777;
+    background: #fff;
+    font-size: 1.2vw;
+}
+
+.more_but button:hover {
+    background-color: #FF7777;
+    color: #fff;
+    cursor: url('/img/cursor/pointer_cursor.png'), auto;
+}
+
+.review_box_text h2{
+    font-size: 1.3em;
+}
+
+/*******************푸터***********************/
+footer {
+    width: 100%;
+    height: 49vw;
+    background-image: url(../img/footer.png);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.footer_text {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer_logo {
+    width: 13vw;
+    margin: 0 auto;
+}
+
+.footer_logo img {
+    width: 100%;
+}
+
+.footer_text button {
+    border: 3px solid #92d6ff;
+    color: #92d6ff;
+    margin: 2vw;
+    padding: 15px 50px;
+    border-radius: 50px;
+}
+
+.footer_text button:hover{
+    background-color: #92d6ff;
+    color: #f1f1f1;
+}
+
+.wave {
+    width: 100%;
+    overflow: hidden;
+}
+.wave img:nth-child(1) {
+    position: absolute;
+    bottom: 2vw;
+    animation: wave1_move 3s infinite;
+}
+
+.wave img:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    animation: wave2_move 3s infinite;
+}
+
+.copy {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    color: #fff;
+    z-index: 1;
+}
+
+#tel{
+    color: #000;
+    
+}
+  
+@keyframes wave1_move{ 
+    0%{left: -50px;}
+    50%{left: 0px;}
+    100%{left: -50px;}
+}
+
+@keyframes wave2_move{ 
+    0%{left: -40px;}
+    50%{left: 0px;}
+    100%{left: -40px;}
+}
